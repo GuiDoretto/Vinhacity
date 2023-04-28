@@ -8,7 +8,7 @@
     <title>Vinhacity</title>
 </head>
 <body>
-    
+
     <div class="container">
         <nav id="menu">
             <ul>
@@ -21,9 +21,43 @@
 
         <h1>Vinhacity</h1>
 
-        <h2>SEJA BEM VINDO A PÁGINA INICIAL</h2>
+        <h2>SEJA BEM VINDO AO QUIZ SOBRE VINHO</h2>
 
-    </div>
+        <div class="slideshow-container">
+            <div class="slide">
+              <img src="imagens/img1.png" alt="Imagem 1">
+            </div>
+            <div class="slide">
+              <img src="imagens/img2.png" alt="Imagem 2">
+            </div>
+            <div class="slide">
+              <img src="imagens/img3.png" alt="Imagem 3">
+            </div>
+          </div>
+        </div>
+
+    <script>var slides = document.querySelectorAll('.slide');
+        var currentSlide = 0;
+        
+        function showSlide(slideIndex) {
+          slides[currentSlide].classList.remove('active');
+          slides[slideIndex].classList.add('active');
+          currentSlide = slideIndex;
+        }
+        
+        function nextSlide() {
+          var nextSlideIndex = (currentSlide + 1) % slides.length;
+          showSlide(nextSlideIndex);
+        }
+        
+        // Mostra o primeiro slide
+        showSlide(0);
+        
+        // Alterna para o próximo slide a cada 3 segundos
+        setInterval(nextSlide, 3000);</script>
+
     <footer>@2023 - todos os direitos reservados</footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
